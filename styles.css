@@ -207,7 +207,20 @@ header {
 
 
 
-/* Container do slider */
+/* Estilo para o título no slide */
+.title {
+    position: absolute;
+    top: 50%;  /* Centraliza verticalmente */
+    left: 50%;  /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);  /* Ajusta para garantir o centro exato */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Sombra para destacar o texto */
+    z-index: 2;  /* Garante que o título fique acima da imagem */
+}
+
 /* Container do slider */
 .slider-container {
     position: relative;
@@ -229,6 +242,7 @@ header {
     flex-shrink: 0; /* Impede o encolhimento dos slides */
     border-radius: 15px;  /* Cantos arredondados para os slides */
     overflow: hidden;  /* Garante que a imagem se ajuste ao tamanho do slide */
+    position: relative; /* Para garantir que o título possa ser posicionado corretamente */
 }
 
 img {
@@ -249,7 +263,7 @@ img {
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;  /* Tornando os botões arredondados */
+    border-radius: 25%;  /* Tornando os botões arredondados */
     transition: background 0.3s ease;
 }
 
@@ -299,9 +313,6 @@ img {
         padding: 10px;
     }
 }
-
-
-/* FIM DO SLIDER  */
 
 
 /* Seção de Localização */
